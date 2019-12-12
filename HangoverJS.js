@@ -137,7 +137,7 @@ var button = document.getElementById("form-btn").addEventListener("click", calcu
     
     if (total < 400) {
         console.log(total);
-        result.innerText = "Get off this website, you're not even drunk.  You have yourself a productive day tomorrow."
+        result.innerText = "Get off this website, you're not even drunk.  You go and have yourself a productive day tomorrow."
         return img.src = "sober.gif";
 
     } else if (total >= 400 && total < 600) {
@@ -146,12 +146,12 @@ var button = document.getElementById("form-btn").addEventListener("click", calcu
         return img.src = "tipsy.gif";
     } else if (total >= 600 && total < 1000) {
         console.log(total);
-        result.innerText = "You're in trouble... Tomorrow is going to be rough.  Not much we can do that this point but glad you're coherent enough to use this."
+        result.innerText = "You're in trouble... Tomorrow is going to be rough.  Not much we can do at this point but glad you're coherent enough to fill out an online form."
         return img.src = "drunk.gif";
     } 
     else {
         console.log(total);
-        result.innerText = "How did you even manage to use the internet in your state?  Tomorrow will be hell for you.  Best of luck.";
+        result.innerText = "How did you even manage to use the internet in this state?  Tomorrow will be hell for you.  Best of luck.";
         return img.src = "wasted.gif";
     }
 };
