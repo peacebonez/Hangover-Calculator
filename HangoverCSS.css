@@ -1,0 +1,78 @@
+body {
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Muli', sans-serif;
+}
+
+.title {
+    margin-top: 3rem;
+    text-align: center;
+}
+
+h2, span {
+    font-style: italic;
+    letter-spacing: .2rem;
+    color: red;  
+}
+
+.form-content {
+    margin: auto;
+    text-align: center;
+}
+
+.drink-label {
+    display: block;
+    margin: 1rem;
+    text-align: center;
+    position: relative;
+}
+
+.drink-input {
+    outline: none;
+    width: 2.5rem;
+}
+
+
+.drink-input:focus {
+    border-color: #6BE8FF;
+    background: #FFFDF2;
+}
+
+
+#sex {
+    width: 6rem;
+}
+
+.eat-drink {
+    display: block;
+    outline:none;
+    margin: 1rem;
+
+}
+
+.submit-btn {
+    color: white;
+    font-size: 2rem;
+    border-radius: 4px;
+    text-shadow: 0 1px 1px rgba(0, 0, 0, 0.2);
+    background: rgb(28, 184, 65);
+    width: 200px;
+    margin-top: 1rem;
+    border-radius: 8px;
+    padding: 12px;
+    cursor: pointer;
+}
+
+.result-paragraph {
+    text-align: center;
+    font-size: 2rem;
+    margin-bottom: 5rem;
+}
+
+label {
+    font-size: 1.2rem;  
+}
+
+input {
+    font-size: .8rem;
+}
