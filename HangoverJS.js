@@ -1,21 +1,19 @@
 var button = document.getElementById("form-btn").addEventListener("click", calculateHangover);
-// var submit = document.getElementById("form-main").addEventListener("submit", function(event){
-//     event.preventDefault();
-// });
-
-const drinks = {
-    shot: 100,
-    beerCan: 100,
-    beerPint: 125,
-    craftBeerCan: 125,
-    craftBeerPint: 150,
-    wineGlass: 100,
-    mixedDrink: 100,
-    cocktail: 100,
-    cocktailStrong: 150
-    }
 
  function calculateHangover() {
+
+    const drinks = {
+        shot: 100,
+        beerCan: 100,
+        beerPint: 125,
+        craftBeerCan: 125,
+        craftBeerPint: 150,
+        wineGlass: 100,
+        mixedDrink: 100,
+        cocktail: 100,
+        cocktailStrong: 150
+        }
+    
 
     var userAge = document.getElementById("age").value
     function ageCalc(enterAge) {
@@ -103,7 +101,6 @@ const drinks = {
     if (ageCalc(userAge) == "mofo" || weightCalc(userWeight) == "mofo" || timeCalc(userHoursDrinking) == "mofo") {
         return;
     }
-    console.log(timeCalc(userHoursDrinking) + " IS THIS BREAKING THE CODE?");
 
     var shotScore = document.getElementById("shot").value * drinks.shot;
     var beerCanScore = document.getElementById("beerCan").value * drinks.beerCan;
@@ -122,37 +119,39 @@ const drinks = {
     } else if (document.getElementById("bellyNo").checked) {
         total = total;
     } else {
-        // alert("Please select if you've had a full meal prior to drinking.")
         return;
     }
-
     if(document.getElementById("hydrateYes").checked) {
         total += -150;
-    }else if(document.getElementById("hydrateNo").checked) {
+    } else if (document.getElementById("hydrateSome").checked) {
+        total += -50;
+    }
+    else if(document.getElementById("hydrateNo").checked) {
         total = total;
     } else {
-        // alert("Please select if you hydrated before and during drinking.")
         return;
     }
 
-    var result = document.getElementById("result-text")
-
+    var result = document.getElementById("result-text");
+    var img = document.getElementById("img");
+    
     if (total < 400) {
         console.log(total);
-        return result.innerText = "Get off this website, you're not even drunk.  You have yourself a productive day tomorrow."
+        result.innerText = "Get off this website, you're not even drunk.  You have yourself a productive day tomorrow."
+        return img.src = "sober.gif";
+
     } else if (total >= 400 && total < 600) {
         console.log(total);
-        return result.innerText = "You're on the fence to being hungover- drink water and take 2 tylenol."
+        result.innerText = "You're on the fence to being hungover- drink water and take 2 tylenol."
+        return img.src = "tipsy.gif";
     } else if (total >= 600 && total < 1000) {
         console.log(total);
-        return result.innerText = "You're in trouble.  Tomorrow is going to be rough.  Not much we can do that this point but glad you're coherent enough to use this. "
+        result.innerText = "You're in trouble... Tomorrow is going to be rough.  Not much we can do that this point but glad you're coherent enough to use this."
+        return img.src = "drunk.gif";
     } 
     else {
         console.log(total);
-        return result.innerText = "How did you even manage to use the internet in your state?  Tomorrow will be hell for you.  Best of luck.";
+        result.innerText = "How did you even manage to use the internet in your state?  Tomorrow will be hell for you.  Best of luck.";
+        return img.src = "wasted.gif";
     }
 };
-
-
-
-

@@ -2,17 +2,19 @@ body {
     margin: 0;
     box-sizing: border-box;
     font-family: 'Muli', sans-serif;
+    background: #EDE2DC;
 }
 
 .title {
-    margin-top: 3rem;
+    margin-top: 4rem;
     text-align: center;
+    color: #3F56A1;
 }
 
 h2, span {
     font-style: italic;
     letter-spacing: .2rem;
-    color: red;  
+    color: #F13C1E;  
 }
 
 .form-content {
@@ -30,11 +32,12 @@ h2, span {
 .drink-input {
     outline: none;
     width: 2.5rem;
+    border-radius: 5px;
 }
 
 
 .drink-input:focus {
-    border-color: #6BE8FF;
+    border-color: #C4CBE3;
     background: #FFFDF2;
 }
 
@@ -51,11 +54,11 @@ h2, span {
 }
 
 .submit-btn {
-    color: white;
+    color: black;
     font-size: 2rem;
     border-radius: 4px;
     text-shadow: 0 1px 1px rgba(0, 0, 0, 0.2);
-    background: rgb(28, 184, 65);
+    background: #C4CBE3;
     width: 200px;
     margin-top: 1rem;
     border-radius: 8px;
@@ -65,8 +68,18 @@ h2, span {
 
 .result-paragraph {
     text-align: center;
-    font-size: 2rem;
-    margin-bottom: 5rem;
+    font-size: 1.5rem;
+    margin-bottom: 4rem;
+    padding: 1.5rem;
+
+}
+
+img {
+    display: block;
+    margin: auto;
+    width: 45%;
+    padding-top: 0;
+    padding-bottom: 6rem;
 }
 
 label {

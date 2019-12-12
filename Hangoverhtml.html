@@ -3,6 +3,7 @@
 <head>
     <meta charset="utf-8">
     <title>Hangover Calculator</title>
+    <link href="beer.png" rel="icon">
     <link rel="stylesheet" href="HangoverCSS.css" type="text/css">
     <link href="https://fonts.googleapis.com/css?family=Muli&display=swap" rel="stylesheet">
 </head>
@@ -36,31 +37,31 @@
         <h2>So, exactly <span class="how-much">how much</span> did you drink tonight?</h2>
        <div id="drink-div">
             <label for="shot" class="drink-label"> Shots:
-                <input type="number" id="shot" class="drink-input" name="amount"  min="0" placeholder="0">
+                <input type="number" id="shot" class="drink-input drink-adder" name="amount"  min="0" placeholder="0">
              </label>
              <label for="beerCan" class="drink-label"> Cans of Beer:
-                <input type="number" id="beerCan" class="drink-input" name="amount" min="0" placeholder="0">
+                <input type="number" id="beerCan" class="drink-input drink-adder" name="amount" min="0" placeholder="0">
             </label>
             <label for="beerPint" class="drink-label">  Pints of Beer:   
-                <input type="number" id="beerPint" class="drink-input" name="amount" min="0" placeholder="0">
+                <input type="number" id="beerPint" class="drink-input drink-adder" name="amount" min="0" placeholder="0">
             </label>   
             <label for="craftBeerCan" class="drink-label"> Cans of Craft Beer:
-                <input type="number" id="craftBeerCan" class="drink-input" name="amount" min="0" placeholder="0">
+                <input type="number" id="craftBeerCan" class="drink-input drink-adder" name="amount" min="0" placeholder="0">
             </label>
             <label for="craftBeerPint" class="drink-label"> Pints of Craft Beer: 
-                <input type="number" id="craftBeerPint" class="drink-input" name="amount" min="0" placeholder="0">
+                <input type="number" id="craftBeerPint" class="drink-input drink-adder" name="amount" min="0" placeholder="0">
             </label>
             <label for="wineGlass" class="drink-label"> Glasses of Wine:   
-                <input type="number" id="wineGlass" class="drink-input" name="amount" min="0" placeholder="0">
+                <input type="number" id="wineGlass" class="drink-input drink-adder" name="amount" min="0" placeholder="0">
             </label> 
             <label for="mixedDrink" class="drink-label">  Mixed Drinks: 
-                <input type="number" id="mixedDrink" class="drink-input" name="amount" min="0" placeholder="0">
+                <input type="number" id="mixedDrink" class="drink-input drink-adder" name="amount" min="0" placeholder="0">
             </label> 
             <label for="cocktail" class="drink-label">  Cocktails: 
-                <input type="number" id="cocktail" class="drink-input" name="amount" min="0" placeholder="0">
+                <input type="number" id="cocktail" class="drink-input drink-adder" name="amount" min="0" placeholder="0">
             </label>    
             <label for="cocktailStrong" class="drink-label"> Strong Cocktails:
-                <input type="number" id="cocktailStrong" class="drink-input" name="amount" min="0" placeholder="0">
+                <input type="number" id="cocktailStrong" class="drink-input drink-adder" name="amount" min="0" placeholder="0">
             </label>
         </div>
             <label for="bellyFull" class="eat-drink">Did you have a full meal before drinking? 
@@ -69,6 +70,7 @@
             </label>
             <label for="hydrate" class="eat-drink">Did you hydrate before and during drinking?
                 <input type="radio" name="drink" value="yes" id="hydrateYes" required/> Yes
+                <input type="radio" name="drink" value="somewhat" id="hydrateSome"/> Somewhat
                 <input type="radio" name="drink" value="no" id="hydrateNo"/> No<br>
             </label>
             <label for="cocktailStrong" class="drink-label"> For how many hours were you drinking?
@@ -77,8 +79,10 @@
 
             <input type="submit" value="Here we go!" class="submit-btn" id="form-btn">
         </form>
-
+    <div id="result-div">
         <p id="result-text" class="result-paragraph">Click button to see results</p>
+        <img src="" id="img">;
+    </div>
     </div>
     <script src="HangoverJS.js"></script>
 </body>
