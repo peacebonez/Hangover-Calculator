@@ -29,18 +29,26 @@ span {
 }
 
 .form-wrapper {
-    border: groove #034585;
+    border: groove #034585 1px;
+    border-radius: 35px;
     width: 75%;
     display: block;
     margin: auto;
     background: #FFF;
     padding: 3rem;
     margin-top: 3rem;
+    margin-bottom: 3rem;
+    box-shadow: 10px 10px 20px #8f2e2e84;
 }
 
 .form-content {
     margin: auto;
     text-align: center;
+}
+
+select {
+    font-size: 1rem;
+    margin-left: 1rem;  
 }
 
 .sel-opt {
@@ -63,7 +71,9 @@ span {
 
 .drink-input:focus {
     border-color: #C4CBE3;
-    background: #FFFDF2;
+    /* background: #FFFDF2; */
+    background: rgb(249, 171, 160, 0.4);
+    transition: all 0.5s
 }
 
 
@@ -81,8 +91,8 @@ span {
 .submit-btn {
     color: black;
     font-size: 1.8rem;
-    border-radius: 4px;
-    text-shadow: 0 1px 1px rgba(0, 0, 0, 0.2);
+    border: outset 2px;
+    text-shadow: 2px 5px 2px rgba(0, 0, 0, 0.2);
     background: #C4CBE3;
     width: 220px;
     margin-top: 1rem;
@@ -116,5 +126,5 @@ label {
 }
 
 input {
-    font-size: .8rem;
+    font-size: 1rem;
 }

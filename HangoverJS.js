@@ -20,7 +20,7 @@ var button = document.getElementById("form-btn").addEventListener("click", calcu
 
         if (isNaN(enterAge) || enterAge < 21 || enterAge > 99) {
             // alert("Please input a valid age");
-            return "mofo";
+            return "invalid";
         } 
         
         if (enterAge >= 21 && enterAge < 26) {
@@ -42,7 +42,7 @@ var button = document.getElementById("form-btn").addEventListener("click", calcu
 
         if (isNaN(enterWeight) || enterWeight < 50 || enterWeight > 1400) {
             // alert("Please input a valid weight.");
-            return "mofo";
+            return "invalid";
         }
 
         if (enterWeight < 125) {
@@ -73,7 +73,7 @@ var button = document.getElementById("form-btn").addEventListener("click", calcu
 
         if (isNaN(enterTime) || enterTime < 0 || enterTime > 24) {
             // alert("Please input a valid amount of hours.");
-            return "mofo";
+            return "invalid";
         }
 
         if (enterTime < 1) {
@@ -98,7 +98,7 @@ var button = document.getElementById("form-btn").addEventListener("click", calcu
     console.log("sex score is " + sexScore);
     
 
-    if (ageCalc(userAge) == "mofo" || weightCalc(userWeight) == "mofo" || timeCalc(userHoursDrinking) == "mofo") {
+    if (ageCalc(userAge) == "invalid" || weightCalc(userWeight) == "invalid" || timeCalc(userHoursDrinking) == "invalid") {
         return;
     }
 
@@ -138,20 +138,20 @@ var button = document.getElementById("form-btn").addEventListener("click", calcu
     if (total < 400) {
         console.log(total);
         result.innerText = "Get off this website, you're not even drunk.  You go and have yourself a productive day tomorrow."
-        return img.src = "sober.gif";
+        return img.src = "https://i.giphy.com/media/OMK7LRBedcnhm/giphy.webp";
 
     } else if (total >= 400 && total < 600) {
         console.log(total);
         result.innerText = "You're on the fence to being hungover- drink water and take 2 tylenol."
-        return img.src = "tipsy.gif";
+        return img.src = "https://media.giphy.com/media/acIy5aKe4nryg/giphy.gif";
     } else if (total >= 600 && total < 1000) {
         console.log(total);
         result.innerText = "You're in trouble... Tomorrow is going to be rough.  Not much we can do at this point but glad you're coherent enough to fill out an online form."
-        return img.src = "drunk.gif";
+        return img.src = "https://media.giphy.com/media/pcKnpFrumIM7TtzayE/giphy.gif";
     } 
     else {
         console.log(total);
         result.innerText = "How did you even manage to use the internet in this state?  Tomorrow will be hell for you.  Best of luck.";
-        return img.src = "wasted.gif";
+        return img.src = "https://media.giphy.com/media/o6xoGwmBIb32M/giphy.gif";
     }
 };
